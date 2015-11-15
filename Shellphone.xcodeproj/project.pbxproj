@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8712C7C16347200AF057C402 /* Pods_Shellphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */; };
+		A99E40801BF8F97600AEC034 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E407F1BF8F97600AEC034 /* User.swift */; };
 		FC423A0F1BF7D3360047EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A0E1BF7D3360047EADD /* AppDelegate.swift */; };
 		FC423A111BF7D3360047EADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A101BF7D3360047EADD /* ViewController.swift */; };
 		FC423A141BF7D3370047EADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC423A121BF7D3370047EADD /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		5A3DF4FA2165EBB6139009A8 /* Pods-Shellphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shellphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shellphone/Pods-Shellphone.debug.xcconfig"; sourceTree = "<group>"; };
+		A99E407F1BF8F97600AEC034 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D3AC46D2DFC48342E2ED558F /* Pods-Shellphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shellphone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shellphone/Pods-Shellphone.release.xcconfig"; sourceTree = "<group>"; };
 		FC423A0B1BF7D3360047EADD /* Shellphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shellphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC423A0E1BF7D3360047EADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				FC423A1A1BF7D3370047EADD /* Info.plist */,
 				FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */,
 				FC423A431BF8461F0047EADD /* ShellNet.swift */,
+				A99E407F1BF8F97600AEC034 /* User.swift */,
 			);
 			path = Shellphone;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				FC423A441BF8461F0047EADD /* ShellNet.swift in Sources */,
 				FC423A111BF7D3360047EADD /* ViewController.swift in Sources */,
+				A99E40801BF8F97600AEC034 /* User.swift in Sources */,
 				FC423A0F1BF7D3360047EADD /* AppDelegate.swift in Sources */,
 				FC423A4B1BF852AF0047EADD /* LoginViewController.swift in Sources */,
 				FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */,

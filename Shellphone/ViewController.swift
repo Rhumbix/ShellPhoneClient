@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -25,13 +26,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         // Do any additional setup after loading the view, typically from a nib.
-        
+        getUsers()
         presentUsernameInput()
     }
 
     override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getUsers(){
+        ShellNet.getUsers(
+            { (response) -> Void in
+                var users:[User] = []
+                let respArr:[JSON] = JSON(response).array!
+                for jsonUser:JSON in respArr{
+                    users.append(User.init(withDict: jsonUser))
+                }
+                NSLog("users!")
+            },
+            failureCallback: { (error: NSError!) -> Void in
+                NSLog("error")
+                NSLog(error.localizedDescription)
+            }
+        )
     }
     
     func presentUsernameInput(){

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '01D77C8A7279F059652FBAF4'
+               BlueprintIdentifier = '0F11DFFCAD32D5B99D7960A6'
                BlueprintName = 'Pods-Shellphone'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Shellphone.framework'>
