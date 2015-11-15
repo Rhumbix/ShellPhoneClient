@@ -232,6 +232,13 @@
                                     <constraint firstAttribute="height" constant="167" id="Z77-2f-oVS"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November 15, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B5-3R-cSu">
+                                <rect key="frame" x="116" y="36" width="88" height="11.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Radiate 5" translatesAutoresizingMaskIntoConstraints="NO" id="5ZX-3b-jPn">
                                 <rect key="frame" x="22" y="37" width="275" height="150"/>
                                 <animations/>
@@ -244,13 +251,6 @@
                                 <rect key="frame" x="29" y="42" width="263" height="44"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November 15, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B5-3R-cSu">
-                                <rect key="frame" x="116" y="36" width="88" height="11.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -273,6 +273,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="animatedBeaconImage" destination="5ZX-3b-jPn" id="vzR-b4-Qzl"/>
                         <outlet property="myUsernameLabel" destination="8so-q8-8K6" id="Pik-ab-gEZ"/>
                         <outlet property="tableView" destination="XH2-aR-Jwk" id="utf-Ma-cEk"/>
                     </connections>

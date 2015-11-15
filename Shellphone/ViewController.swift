@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var userID:String?
 
+    @IBOutlet weak var animatedBeaconImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     var crewMembers:[String] = ["jon","george","cameron"]
@@ -93,6 +94,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         label.text = self.crewMembers[indexPath.row]
         label.font = UIFont(name: "Helvetica-Bold", size: 18.0)
         label.textColor = UIColor(red: 65.0/255.0, green: 117.0/255.0, blue: 5.0/255.0, alpha: 1.0)
+        
+        let animationImages = ["Radiate 1", "Radiate 2", "Radiate 3", "Radiate 4", "Radiate 5"].map { (str:String) -> UIImage in
+            return UIImage(named: str)!
+        }
+        self.animatedBeaconImage.animationImages = animationImages
+        self.animatedBeaconImage.animationDuration = 1.0
+        self.animatedBeaconImage.startAnimating()
     }
     
     func deselectUser(cell:UITableViewCell,indexPath:NSIndexPath){
@@ -106,6 +114,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         label.text = self.crewMembers[indexPath.row]
         label.font = UIFont(name: "Helvetica", size: 18.0)
         label.textColor = UIColor(red: 155.0/255.0, green: 155/255.0, blue: 155.0/255.0, alpha: 1.0)
+        
+        let animationImages = ["Radiate 5"].map { (str:String) -> UIImage in
+            return UIImage(named: str)!
+        }
+        self.animatedBeaconImage.animationImages = animationImages
+        self.animatedBeaconImage.startAnimating()
     }
     
     func cellTouchDown(sender:UIButton){
