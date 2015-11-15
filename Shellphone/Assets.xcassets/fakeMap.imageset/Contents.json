@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "MapImage.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "fake_map@2x.png",
+      "filename" : "MapImage@2x.png",
       "scale" : "2x"
     },
     {
