@@ -12,7 +12,7 @@ import SwiftyJSON
 
 public class ShellNet : NSObject {
     
-    private static let API_BASE_URL = "http://localhost:9393"
+    private static let API_BASE_URL = "http://shellphoneserver.herokuapp.com"
     
     private class func getNsErrorRepresentation(code: Int, value: AnyObject?, errorMessage: String? = nil) -> NSError {
         var errorValue: String

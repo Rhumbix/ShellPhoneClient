@@ -12,7 +12,6 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userID: UITextField!
     
-    
     @IBAction func signInPressed(sender: AnyObject) {
         self.resignFirstResponder()
         

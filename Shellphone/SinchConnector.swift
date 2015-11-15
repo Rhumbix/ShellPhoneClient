@@ -45,7 +45,7 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
         print("callDidEstablish")
         self.activeCall = call
         let userID = self.activeCall!.remoteUserId
-        self.tableVC!.selectTalkingUser(userID)
+        //self.tableVC!.selectTalkingUser(userID)
     }
     
     func callDidEnd(call: SINCall!) {

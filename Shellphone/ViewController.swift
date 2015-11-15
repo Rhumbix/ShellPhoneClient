@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var meLabel: UILabel!
     @IBOutlet weak var recipientName: UITextField!
     @IBOutlet weak var myUsernameLabel: UILabel!
     
@@ -19,7 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var animatedBeaconImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    var crewMembers:[String] = ["jon","george","cameron"]
+    var crewMembers:[String] = ["majd","jon","brittany","anne"]
+    var crewMembersFull:[String] = ["Majd Murad", "Jon Sandness", "Brittany Truex", "Anne York Dickens"]
+    var crewMemberObjects:[User]?
     
     let greenColor:UIColor = UIColor(red: 184.0/255.0, green: 233.0/255.0, blue: 134.0/255.0, alpha: 1.0)
     
@@ -48,6 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 for jsonUser:JSON in respArr{
                     users.append(User.init(withDict: jsonUser))
                 }
+                self.crewMemberObjects = users
                 NSLog("users!")
             },
             failureCallback: { (error: NSError!) -> Void in
@@ -60,6 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func presentUsernameInput(){
         SinchConnector.sharedInstance.setupSinch(self.userID!,vc: self)
         self.myUsernameLabel.text = "Me: " + self.userID!
+        self.meLabel.text = "Me:" + self.userID!
     }
     
     func selectTalkingUser(uID:String){
@@ -68,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let index = self.crewMembers.indexOf(userId)
         let indexPath = NSIndexPath(forRow: index!, inSection: 0)
         let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
-        deselectUser(cell,indexPath:indexPath)
+        selectUser(cell,indexPath:indexPath)
     }
     
     func deselectTalkingUser(uID:String){
@@ -95,6 +100,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let label:UILabel = cell.viewWithTag(1) as! UILabel
         label.text = self.crewMembers[indexPath.row]
+        
+        let profileImage:UIImageView = cell.viewWithTag(6) as! UIImageView
+        profileImage.image = UIImage(named: crewMembers[indexPath.row])
         
         let button:UIButton = cell.viewWithTag(3)! as! UIButton
         button.addTarget(self, action: "cellTouchDown:", forControlEvents: UIControlEvents.TouchUpInside)

@@ -184,7 +184,7 @@
                                                     <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jon" translatesAutoresizingMaskIntoConstraints="NO" id="ODv-4d-j5D">
+                                                <imageView userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jon" translatesAutoresizingMaskIntoConstraints="NO" id="ODv-4d-j5D">
                                                     <rect key="frame" x="14" y="5" width="53" height="53"/>
                                                     <animations/>
                                                 </imageView>
@@ -207,11 +207,11 @@
                                                 <constraint firstItem="dHS-pt-GIB" firstAttribute="top" secondItem="cV3-64-omW" secondAttribute="topMargin" constant="-16" id="0RR-b8-JIa"/>
                                                 <constraint firstItem="dHS-pt-GIB" firstAttribute="width" secondItem="cV3-64-omW" secondAttribute="width" id="9Gg-Z3-0wW"/>
                                                 <constraint firstItem="dHS-pt-GIB" firstAttribute="leading" secondItem="cV3-64-omW" secondAttribute="leadingMargin" constant="-8" id="G52-KG-HCs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jq0-xz-68e" secondAttribute="trailing" constant="10" id="IYy-ev-0Yp"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dHS-pt-GIB" secondAttribute="bottom" constant="-8" id="dqZ-9J-noc"/>
                                                 <constraint firstItem="Jq0-xz-68e" firstAttribute="centerY" secondItem="cV3-64-omW" secondAttribute="centerY" id="fzJ-Y2-Z3x"/>
                                                 <constraint firstItem="ODv-4d-j5D" firstAttribute="leading" secondItem="cV3-64-omW" secondAttribute="leadingMargin" constant="6" id="oJC-FP-SHz"/>
                                                 <constraint firstItem="ODv-4d-j5D" firstAttribute="centerY" secondItem="cV3-64-omW" secondAttribute="centerY" id="qWp-N8-4cM"/>
-                                                <constraint firstItem="Jq0-xz-68e" firstAttribute="leading" secondItem="cV3-64-omW" secondAttribute="leadingMargin" constant="264" id="zLR-ET-raq"/>
                                             </constraints>
                                             <connections>
                                                 <outletCollection property="gestureRecognizers" destination="urg-kv-0hD" appends="YES" id="Ewz-3I-9WC"/>
@@ -247,10 +247,20 @@
                                     <constraint firstAttribute="height" constant="150" id="cX9-6Z-t7K"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watershed Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-On-Vhs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DPR Renovation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-On-Vhs">
                                 <rect key="frame" x="29" y="42" width="263" height="44"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AED-XP-3aN"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ys5-gt-rm9">
+                                <rect key="frame" x="145.5" y="165" width="29.5" height="14"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -265,8 +275,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="XH2-aR-Jwk" secondAttribute="trailing" constant="-20" id="Bos-aQ-paz"/>
                             <constraint firstItem="5ZX-3b-jPn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CoB-Bn-OeS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PAe-Pj-eeY" secondAttribute="trailing" constant="-20" id="GLa-nI-FzR"/>
+                            <constraint firstItem="ys5-gt-rm9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="145" id="LEO-5j-Y1B"/>
+                            <constraint firstItem="dAh-On-Vhs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="StA-Dp-OZm"/>
                             <constraint firstItem="8B5-3R-cSu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VK8-77-1Wg"/>
                             <constraint firstItem="8B5-3R-cSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="cCa-1P-auQ"/>
+                            <constraint firstItem="dAh-On-Vhs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="fBi-Wy-CMa"/>
+                            <constraint firstItem="ys5-gt-rm9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="grd-h6-qfP"/>
                             <constraint firstItem="PAe-Pj-eeY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="pYc-NZ-BZK"/>
                             <constraint firstItem="PAe-Pj-eeY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tzK-4Q-Q8M"/>
                         </constraints>
@@ -274,6 +288,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="animatedBeaconImage" destination="5ZX-3b-jPn" id="vzR-b4-Qzl"/>
+                        <outlet property="meLabel" destination="ys5-gt-rm9" id="Tb1-mn-rHL"/>
                         <outlet property="myUsernameLabel" destination="8so-q8-8K6" id="Pik-ab-gEZ"/>
                         <outlet property="tableView" destination="XH2-aR-Jwk" id="utf-Ma-cEk"/>
                     </connections>
