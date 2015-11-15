@@ -96,6 +96,8 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
         self.sinchClient!.startListeningOnActiveConnection()
     }
     
+    
+    
     func startConference(){
         let call:SINCall = sinchClient!.callClient().callConferenceWithId(conferenceID)
         self.sinchClient!.callClient().delegate = self
