@@ -13,10 +13,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var recipientName: UITextField!
     @IBOutlet weak var myUsernameLabel: UILabel!
+    
+    var userID:String?
 
     @IBOutlet weak var tableView: UITableView!
     
     var crewMembers:[String] = ["jon","george","cameron"]
+    
+    let greenColor:UIColor = UIColor(red: 184.0/255.0, green: 233.0/255.0, blue: 134.0/255.0, alpha: 1.0)
     
     override func viewWillAppear(animated: Bool) {
         self.tableView.dataSource = self
@@ -53,24 +57,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func presentUsernameInput(){
-        var inputTextField: UITextField?
-        
-        let alertController = UIAlertController(title: "Title", message: "Enter your username", preferredStyle: .Alert)
-        let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            let username = inputTextField!.text!
-            SinchConnector.sharedInstance.setupSinch(username,vc: self)
-            self.myUsernameLabel.text = "Me: " + username
-        })
-        let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in }
-        
-        alertController.addAction(ok)
-        alertController.addAction(cancel)
-        
-        alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
-            inputTextField = textField
-        }
-        
-        presentViewController(alertController, animated: true, completion: nil)
+        SinchConnector.sharedInstance.setupSinch(self.userID!,vc: self)
+        self.myUsernameLabel.text = "Me: " + self.userID!
     }
     
     func selectTalkingUser(uID:String){
@@ -79,8 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let index = self.crewMembers.indexOf(userId)
         let indexPath = NSIndexPath(forRow: index!, inSection: 0)
         let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
-        let statusImage:UIView = cell.viewWithTag(2)!
-        statusImage.backgroundColor = UIColor.greenColor()
+        deselectUser(cell,indexPath:indexPath)
     }
     
     func deselectTalkingUser(uID:String){
@@ -89,10 +76,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let index = self.crewMembers.indexOf(userId)
         let indexPath = NSIndexPath(forRow: index!, inSection: 0)
         let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
-        let statusImage:UIView = cell.viewWithTag(2)!
-        statusImage.backgroundColor = UIColor.whiteColor()
+        deselectUser(cell,indexPath:indexPath)
     }
-    
 
     @IBAction func conferenceBegin(sender: AnyObject) {
         SinchConnector.sharedInstance.startConference()
@@ -115,14 +100,39 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    func selectUser(cell:UITableViewCell,indexPath:NSIndexPath){
+        let statusImage:UIView = cell.viewWithTag(2)!
+        statusImage.backgroundColor = self.greenColor
+        
+        let greenOvalImage:UIImageView = cell.viewWithTag(5)! as! UIImageView
+        greenOvalImage.image = UIImage(named: "greenOvalDark")
+        
+        let label:UILabel = cell.viewWithTag(1) as! UILabel
+        label.text = self.crewMembers[indexPath.row]
+        label.font = UIFont(name: "Helvetica-Bold", size: 18.0)
+        label.textColor = UIColor(red: 65.0/255.0, green: 117.0/255.0, blue: 5.0/255.0, alpha: 1.0)
+    }
+    
+    func deselectUser(cell:UITableViewCell,indexPath:NSIndexPath){
+        let statusImage:UIView = cell.viewWithTag(2)!
+        statusImage.backgroundColor = UIColor.whiteColor()
+        
+        let greenOvalImage:UIImageView = cell.viewWithTag(5)! as! UIImageView
+        greenOvalImage.image = UIImage(named: "greenOval")
+        
+        let label:UILabel = cell.viewWithTag(1) as! UILabel
+        label.text = self.crewMembers[indexPath.row]
+        label.font = UIFont(name: "Helvetica", size: 18.0)
+        label.textColor = UIColor(red: 155.0/255.0, green: 155/255.0, blue: 155.0/255.0, alpha: 1.0)
+    }
+    
     func cellTouchDown(sender:UIButton){
         if let _ = SinchConnector.sharedInstance.activeCall{
             // End Call
             let cell:UITableViewCell = sender.superview!.superview! as! UITableViewCell
             let indexPath = self.tableView.indexPathForCell(cell)!
             
-            let statusImage:UIView = cell.viewWithTag(2)!
-            statusImage.backgroundColor = UIColor.whiteColor()
+            deselectUser(cell,indexPath:indexPath)
             
             SinchConnector.sharedInstance.endCall()
         }else{
@@ -130,13 +140,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let cell:UITableViewCell = sender.superview!.superview! as! UITableViewCell
             let indexPath = self.tableView.indexPathForCell(cell)!
             
-            let statusImage:UIView = cell.viewWithTag(2)!
-            statusImage.backgroundColor = UIColor.greenColor()
+            selectUser(cell,indexPath:indexPath)
             
             let crewUserID = self.crewMembers[indexPath.row]
             SinchConnector.sharedInstance.startCall(crewUserID)
         }
-        
         
     }
 

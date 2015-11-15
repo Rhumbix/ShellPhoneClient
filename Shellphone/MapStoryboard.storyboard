@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bWa-FT-dhj">
+            <objects>
+                <viewController id="akw-b3-u91" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hgu-4e-Y20"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Cy-jP-Z8N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mon-Uq-s3v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapAsset" translatesAutoresizingMaskIntoConstraints="NO" id="ALs-Rt-OEU">
+                                <rect key="frame" x="0.0" y="90" width="320" height="478"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STUFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-4f-H2S">
+                                <rect key="frame" x="108.5" y="28" width="103.5" height="37"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.14901960784313725" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wEQ-4f-H2S" firstAttribute="top" secondItem="hgu-4e-Y20" secondAttribute="bottom" constant="8" id="3AX-zp-Nda"/>
+                            <constraint firstItem="9Cy-jP-Z8N" firstAttribute="top" secondItem="ALs-Rt-OEU" secondAttribute="bottom" id="hQW-LV-ogs"/>
+                            <constraint firstItem="wEQ-4f-H2S" firstAttribute="centerX" secondItem="mon-Uq-s3v" secondAttribute="centerX" id="koa-bX-sEY"/>
+                            <constraint firstItem="ALs-Rt-OEU" firstAttribute="leading" secondItem="mon-Uq-s3v" secondAttribute="leadingMargin" constant="-16" id="vts-2S-mVJ"/>
+                            <constraint firstItem="ALs-Rt-OEU" firstAttribute="top" secondItem="hgu-4e-Y20" secondAttribute="bottom" constant="70" id="xjz-J8-TcR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ALs-Rt-OEU" secondAttribute="trailing" constant="-16" id="xxB-EL-vOd"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAl-i0-1PJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="193"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mapAsset" width="756" height="1050"/>
+    </resources>
+</document>
