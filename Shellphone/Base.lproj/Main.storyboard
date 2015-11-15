@@ -153,14 +153,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-JS-FfJ">
-                                <rect key="frame" x="243" y="57" width="64" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Start Call"/>
-                                <connections>
-                                    <action selector="conferenceBegin:" destination="BYZ-38-t0r" eventType="touchDown" id="rkl-dJ-4Cs"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Me: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8so-q8-8K6">
                                 <rect key="frame" x="20" y="28" width="213" height="21"/>
                                 <animations/>
@@ -168,14 +160,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9nF-Gd-1Qc">
-                                <rect key="frame" x="20" y="57" width="208" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XH2-aR-Jwk">
-                                <rect key="frame" x="-4" y="102" width="328" height="466"/>
+                                <rect key="frame" x="-4" y="195" width="328" height="373"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -239,20 +225,55 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="watershedPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="PAe-Pj-eeY" userLabel="Watershed">
+                                <rect key="frame" x="-4" y="20" width="328" height="167"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="Z77-2f-oVS"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Radiate 5" translatesAutoresizingMaskIntoConstraints="NO" id="5ZX-3b-jPn">
+                                <rect key="frame" x="22" y="37" width="275" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="9Dc-em-zsH"/>
+                                    <constraint firstAttribute="height" constant="150" id="cX9-6Z-t7K"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Watershed Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-On-Vhs">
+                                <rect key="frame" x="29" y="42" width="263" height="44"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="32"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="November 15, 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B5-3R-cSu">
+                                <rect key="frame" x="116" y="36" width="88" height="11.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XH2-aR-Jwk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="2m3-J3-Ggh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XH2-aR-Jwk" secondAttribute="bottom" id="2qb-sz-9RV"/>
-                            <constraint firstItem="XH2-aR-Jwk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="BLd-P8-NGJ"/>
+                            <constraint firstItem="5ZX-3b-jPn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="6hj-iV-UCa"/>
+                            <constraint firstItem="XH2-aR-Jwk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="175" id="BLd-P8-NGJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XH2-aR-Jwk" secondAttribute="trailing" constant="-20" id="Bos-aQ-paz"/>
+                            <constraint firstItem="5ZX-3b-jPn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CoB-Bn-OeS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PAe-Pj-eeY" secondAttribute="trailing" constant="-20" id="GLa-nI-FzR"/>
+                            <constraint firstItem="8B5-3R-cSu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VK8-77-1Wg"/>
+                            <constraint firstItem="8B5-3R-cSu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="cCa-1P-auQ"/>
+                            <constraint firstItem="PAe-Pj-eeY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="pYc-NZ-BZK"/>
+                            <constraint firstItem="PAe-Pj-eeY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tzK-4Q-Q8M"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="myUsernameLabel" destination="8so-q8-8K6" id="Pik-ab-gEZ"/>
-                        <outlet property="recipientName" destination="9nF-Gd-1Qc" id="gMq-Lu-Gm9"/>
                         <outlet property="tableView" destination="XH2-aR-Jwk" id="utf-Ma-cEk"/>
                     </connections>
                 </viewController>
@@ -264,8 +285,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Radiate 5" width="750" height="405"/>
         <image name="greenOval" width="38" height="38"/>
         <image name="jon" width="53" height="53"/>
         <image name="shapeSIGNIN" width="280" height="45"/>
+        <image name="watershedPhoto" width="375" height="203"/>
     </resources>
 </document>
