@@ -55,9 +55,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         presentViewController(alertController, animated: true, completion: nil)
     }
     
-    
     func selectTalkingUser(uID:String){
-        var userId = uID.lowercaseString
+        let userId = uID.lowercaseString
         print("selectTalkingUser:" + userId)
         let index = self.crewMembers.indexOf(userId)
         let indexPath = NSIndexPath(forRow: index!, inSection: 0)
@@ -67,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func deselectTalkingUser(uID:String){
-        var userId = uID.lowercaseString
+        let userId = uID.lowercaseString
         print("deselectTalkingUser:" + userId)
         let index = self.crewMembers.indexOf(userId)
         let indexPath = NSIndexPath(forRow: index!, inSection: 0)
