@@ -21,6 +21,7 @@
 		FC423A441BF8461F0047EADD /* ShellNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A431BF8461F0047EADD /* ShellNet.swift */; };
 		FC423A4B1BF852AF0047EADD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A4A1BF852AF0047EADD /* LoginViewController.swift */; };
 		FC920EC11BF907EC007D63DD /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC920EC01BF907EC007D63DD /* MapStoryboard.storyboard */; };
+		FC920EC31BF90DF5007D63DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC920EC21BF90DF5007D63DD /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FC423A431BF8461F0047EADD /* ShellNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellNet.swift; sourceTree = "<group>"; };
 		FC423A4A1BF852AF0047EADD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FC920EC01BF907EC007D63DD /* MapStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
+		FC920EC21BF90DF5007D63DD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shellphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		FC423A021BF7D3360047EADD = {
 			isa = PBXGroup;
 			children = (
+				FC920EC21BF90DF5007D63DD /* User.swift */,
 				FC423A0D1BF7D3360047EADD /* Shellphone */,
 				FC423A221BF7D3370047EADD /* ShellphoneTests */,
 				FC423A2D1BF7D3370047EADD /* ShellphoneUITests */,
@@ -361,7 +364,6 @@
 			files = (
 				FC423A441BF8461F0047EADD /* ShellNet.swift in Sources */,
 				FC423A111BF7D3360047EADD /* ViewController.swift in Sources */,
-				A99E40801BF8F97600AEC034 /* User.swift in Sources */,
 				FC423A0F1BF7D3360047EADD /* AppDelegate.swift in Sources */,
 				FC423A4B1BF852AF0047EADD /* LoginViewController.swift in Sources */,
 				FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */,
