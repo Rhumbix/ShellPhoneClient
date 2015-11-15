@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "fake_map.png",
+      "filename" : "Oval 1 Copy 6.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Oval 1 Copy 6@2x.png",
       "scale" : "2x"
     },
     {
