@@ -18,6 +18,7 @@
 		FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A3C1BF7D8150047EADD /* SinchConnector.swift */; };
 		FC423A441BF8461F0047EADD /* ShellNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A431BF8461F0047EADD /* ShellNet.swift */; };
 		FC423A4B1BF852AF0047EADD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A4A1BF852AF0047EADD /* LoginViewController.swift */; };
+		FC920EC11BF907EC007D63DD /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC920EC01BF907EC007D63DD /* MapStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shellphone-Bridging-Header.h"; sourceTree = "<group>"; };
 		FC423A431BF8461F0047EADD /* ShellNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellNet.swift; sourceTree = "<group>"; };
 		FC423A4A1BF852AF0047EADD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FC920EC01BF907EC007D63DD /* MapStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
 		FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shellphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,15 +132,16 @@
 			isa = PBXGroup;
 			children = (
 				FC423A0E1BF7D3360047EADD /* AppDelegate.swift */,
+				FC423A4A1BF852AF0047EADD /* LoginViewController.swift */,
 				FC423A101BF7D3360047EADD /* ViewController.swift */,
 				FC423A3C1BF7D8150047EADD /* SinchConnector.swift */,
-				FC423A4A1BF852AF0047EADD /* LoginViewController.swift */,
 				FC423A121BF7D3370047EADD /* Main.storyboard */,
 				FC423A151BF7D3370047EADD /* Assets.xcassets */,
 				FC423A171BF7D3370047EADD /* LaunchScreen.storyboard */,
 				FC423A1A1BF7D3370047EADD /* Info.plist */,
 				FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */,
 				FC423A431BF8461F0047EADD /* ShellNet.swift */,
+				FC920EC01BF907EC007D63DD /* MapStoryboard.storyboard */,
 			);
 			path = Shellphone;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			files = (
 				FC423A191BF7D3370047EADD /* LaunchScreen.storyboard in Resources */,
 				FC423A161BF7D3370047EADD /* Assets.xcassets in Resources */,
+				FC920EC11BF907EC007D63DD /* MapStoryboard.storyboard in Resources */,
 				FC423A141BF7D3370047EADD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
