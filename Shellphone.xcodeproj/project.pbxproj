@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8712C7C16347200AF057C402 /* Pods_Shellphone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */; };
+		FC423A0F1BF7D3360047EADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A0E1BF7D3360047EADD /* AppDelegate.swift */; };
+		FC423A111BF7D3360047EADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A101BF7D3360047EADD /* ViewController.swift */; };
+		FC423A141BF7D3370047EADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC423A121BF7D3370047EADD /* Main.storyboard */; };
+		FC423A161BF7D3370047EADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC423A151BF7D3370047EADD /* Assets.xcassets */; };
+		FC423A191BF7D3370047EADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC423A171BF7D3370047EADD /* LaunchScreen.storyboard */; };
+		FC423A241BF7D3370047EADD /* ShellphoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A231BF7D3370047EADD /* ShellphoneTests.swift */; };
+		FC423A2F1BF7D3370047EADD /* ShellphoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A2E1BF7D3370047EADD /* ShellphoneUITests.swift */; };
+		FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A3C1BF7D8150047EADD /* SinchConnector.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC423A201BF7D3370047EADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC423A031BF7D3360047EADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC423A0A1BF7D3360047EADD;
+			remoteInfo = Shellphone;
+		};
+		FC423A2B1BF7D3370047EADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC423A031BF7D3360047EADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC423A0A1BF7D3360047EADD;
+			remoteInfo = Shellphone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A3DF4FA2165EBB6139009A8 /* Pods-Shellphone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shellphone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shellphone/Pods-Shellphone.debug.xcconfig"; sourceTree = "<group>"; };
+		D3AC46D2DFC48342E2ED558F /* Pods-Shellphone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shellphone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shellphone/Pods-Shellphone.release.xcconfig"; sourceTree = "<group>"; };
+		FC423A0B1BF7D3360047EADD /* Shellphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shellphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC423A0E1BF7D3360047EADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC423A101BF7D3360047EADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC423A131BF7D3370047EADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC423A151BF7D3370047EADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC423A181BF7D3370047EADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC423A1A1BF7D3370047EADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC423A1F1BF7D3370047EADD /* ShellphoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShellphoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC423A231BF7D3370047EADD /* ShellphoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellphoneTests.swift; sourceTree = "<group>"; };
+		FC423A251BF7D3370047EADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC423A2A1BF7D3370047EADD /* ShellphoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShellphoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC423A2E1BF7D3370047EADD /* ShellphoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellphoneUITests.swift; sourceTree = "<group>"; };
+		FC423A301BF7D3370047EADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC423A3C1BF7D8150047EADD /* SinchConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinchConnector.swift; sourceTree = "<group>"; };
+		FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shellphone-Bridging-Header.h"; sourceTree = "<group>"; };
+		FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shellphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC423A081BF7D3360047EADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8712C7C16347200AF057C402 /* Pods_Shellphone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC423A1C1BF7D3370047EADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC423A271BF7D3370047EADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C42397844AA1ADD2C0A16BD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2EEC84FE529179BCF07A598 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A3DF4FA2165EBB6139009A8 /* Pods-Shellphone.debug.xcconfig */,
+				D3AC46D2DFC48342E2ED558F /* Pods-Shellphone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC423A021BF7D3360047EADD = {
+			isa = PBXGroup;
+			children = (
+				FC423A0D1BF7D3360047EADD /* Shellphone */,
+				FC423A221BF7D3370047EADD /* ShellphoneTests */,
+				FC423A2D1BF7D3370047EADD /* ShellphoneUITests */,
+				FC423A0C1BF7D3360047EADD /* Products */,
+				E2EEC84FE529179BCF07A598 /* Pods */,
+				C42397844AA1ADD2C0A16BD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC423A0C1BF7D3360047EADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC423A0B1BF7D3360047EADD /* Shellphone.app */,
+				FC423A1F1BF7D3370047EADD /* ShellphoneTests.xctest */,
+				FC423A2A1BF7D3370047EADD /* ShellphoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC423A0D1BF7D3360047EADD /* Shellphone */ = {
+			isa = PBXGroup;
+			children = (
+				FC423A0E1BF7D3360047EADD /* AppDelegate.swift */,
+				FC423A101BF7D3360047EADD /* ViewController.swift */,
+				FC423A3C1BF7D8150047EADD /* SinchConnector.swift */,
+				FC423A121BF7D3370047EADD /* Main.storyboard */,
+				FC423A151BF7D3370047EADD /* Assets.xcassets */,
+				FC423A171BF7D3370047EADD /* LaunchScreen.storyboard */,
+				FC423A1A1BF7D3370047EADD /* Info.plist */,
+				FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */,
+			);
+			path = Shellphone;
+			sourceTree = "<group>";
+		};
+		FC423A221BF7D3370047EADD /* ShellphoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC423A231BF7D3370047EADD /* ShellphoneTests.swift */,
+				FC423A251BF7D3370047EADD /* Info.plist */,
+			);
+			path = ShellphoneTests;
+			sourceTree = "<group>";
+		};
+		FC423A2D1BF7D3370047EADD /* ShellphoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC423A2E1BF7D3370047EADD /* ShellphoneUITests.swift */,
+				FC423A301BF7D3370047EADD /* Info.plist */,
+			);
+			path = ShellphoneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC423A0A1BF7D3360047EADD /* Shellphone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC423A331BF7D3370047EADD /* Build configuration list for PBXNativeTarget "Shellphone" */;
+			buildPhases = (
+				EF2D885CC810745E1BF7EEBC /* Check Pods Manifest.lock */,
+				FC423A071BF7D3360047EADD /* Sources */,
+				FC423A081BF7D3360047EADD /* Frameworks */,
+				FC423A091BF7D3360047EADD /* Resources */,
+				2E31D62EE25488D88720716E /* Embed Pods Frameworks */,
+				9E32D38F3B45A9894C96268D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shellphone;
+			productName = Shellphone;
+			productReference = FC423A0B1BF7D3360047EADD /* Shellphone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC423A1E1BF7D3370047EADD /* ShellphoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC423A361BF7D3370047EADD /* Build configuration list for PBXNativeTarget "ShellphoneTests" */;
+			buildPhases = (
+				FC423A1B1BF7D3370047EADD /* Sources */,
+				FC423A1C1BF7D3370047EADD /* Frameworks */,
+				FC423A1D1BF7D3370047EADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC423A211BF7D3370047EADD /* PBXTargetDependency */,
+			);
+			name = ShellphoneTests;
+			productName = ShellphoneTests;
+			productReference = FC423A1F1BF7D3370047EADD /* ShellphoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC423A291BF7D3370047EADD /* ShellphoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC423A391BF7D3370047EADD /* Build configuration list for PBXNativeTarget "ShellphoneUITests" */;
+			buildPhases = (
+				FC423A261BF7D3370047EADD /* Sources */,
+				FC423A271BF7D3370047EADD /* Frameworks */,
+				FC423A281BF7D3370047EADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC423A2C1BF7D3370047EADD /* PBXTargetDependency */,
+			);
+			name = ShellphoneUITests;
+			productName = ShellphoneUITests;
+			productReference = FC423A2A1BF7D3370047EADD /* ShellphoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC423A031BF7D3360047EADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = sandness;
+				TargetAttributes = {
+					FC423A0A1BF7D3360047EADD = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					FC423A1E1BF7D3370047EADD = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = FC423A0A1BF7D3360047EADD;
+					};
+					FC423A291BF7D3370047EADD = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = FC423A0A1BF7D3360047EADD;
+					};
+				};
+			};
+			buildConfigurationList = FC423A061BF7D3360047EADD /* Build configuration list for PBXProject "Shellphone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC423A021BF7D3360047EADD;
+			productRefGroup = FC423A0C1BF7D3360047EADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC423A0A1BF7D3360047EADD /* Shellphone */,
+				FC423A1E1BF7D3370047EADD /* ShellphoneTests */,
+				FC423A291BF7D3370047EADD /* ShellphoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC423A091BF7D3360047EADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC423A191BF7D3370047EADD /* LaunchScreen.storyboard in Resources */,
+				FC423A161BF7D3370047EADD /* Assets.xcassets in Resources */,
+				FC423A141BF7D3370047EADD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC423A1D1BF7D3370047EADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC423A281BF7D3370047EADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E31D62EE25488D88720716E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shellphone/Pods-Shellphone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E32D38F3B45A9894C96268D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shellphone/Pods-Shellphone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF2D885CC810745E1BF7EEBC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC423A071BF7D3360047EADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC423A111BF7D3360047EADD /* ViewController.swift in Sources */,
+				FC423A0F1BF7D3360047EADD /* AppDelegate.swift in Sources */,
+				FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC423A1B1BF7D3370047EADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC423A241BF7D3370047EADD /* ShellphoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC423A261BF7D3370047EADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC423A2F1BF7D3370047EADD /* ShellphoneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC423A211BF7D3370047EADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC423A0A1BF7D3360047EADD /* Shellphone */;
+			targetProxy = FC423A201BF7D3370047EADD /* PBXContainerItemProxy */;
+		};
+		FC423A2C1BF7D3370047EADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC423A0A1BF7D3360047EADD /* Shellphone */;
+			targetProxy = FC423A2B1BF7D3370047EADD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC423A121BF7D3370047EADD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC423A131BF7D3370047EADD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC423A171BF7D3370047EADD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC423A181BF7D3370047EADD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC423A311BF7D3370047EADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC423A321BF7D3370047EADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC423A341BF7D3370047EADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A3DF4FA2165EBB6139009A8 /* Pods-Shellphone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Shellphone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandness.Shellphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shellphone/Shellphone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC423A351BF7D3370047EADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3AC46D2DFC48342E2ED558F /* Pods-Shellphone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Shellphone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandness.Shellphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shellphone/Shellphone-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		FC423A371BF7D3370047EADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ShellphoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandness.ShellphoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shellphone.app/Shellphone";
+			};
+			name = Debug;
+		};
+		FC423A381BF7D3370047EADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ShellphoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandness.ShellphoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shellphone.app/Shellphone";
+			};
+			name = Release;
+		};
+		FC423A3A1BF7D3370047EADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShellphoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandness.ShellphoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Shellphone;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FC423A3B1BF7D3370047EADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ShellphoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sandness.ShellphoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Shellphone;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC423A061BF7D3360047EADD /* Build configuration list for PBXProject "Shellphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC423A311BF7D3370047EADD /* Debug */,
+				FC423A321BF7D3370047EADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC423A331BF7D3370047EADD /* Build configuration list for PBXNativeTarget "Shellphone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC423A341BF7D3370047EADD /* Debug */,
+				FC423A351BF7D3370047EADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC423A361BF7D3370047EADD /* Build configuration list for PBXNativeTarget "ShellphoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC423A371BF7D3370047EADD /* Debug */,
+				FC423A381BF7D3370047EADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC423A391BF7D3370047EADD /* Build configuration list for PBXNativeTarget "ShellphoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC423A3A1BF7D3370047EADD /* Debug */,
+				FC423A3B1BF7D3370047EADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC423A031BF7D3360047EADD /* Project object */;
+}
