@@ -14,6 +14,10 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
     var sinchClient:SINClient?
     var conferenceID:String = "team"
     
+    var activeCall:SINCall?
+    
+    var tableVC:ViewController?
+    
     override init(){
         super.init()
     }
@@ -25,10 +29,12 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
     
     func clientDidStop(client: SINClient!) {
         print("clientDidStop")
+        self.activeCall = nil
     }
     
     func clientDidFail(client: SINClient!, error: NSError!) {
         print("clientDidFail - %@",error)
+        self.activeCall = nil
     }
     
     func callDidProgress(call: SINCall!) {
@@ -37,11 +43,27 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
     
     func callDidEstablish(call: SINCall!) {
         print("callDidEstablish")
+        self.activeCall = call
+        let userID = self.activeCall!.remoteUserId
+        self.tableVC!.selectTalkingUser(userID)
+    }
+    
+    func callDidEnd(call: SINCall!) {
+        print("callDidEnd")
+        self.activeCall = call
+        let userID = self.activeCall!.remoteUserId
+        self.tableVC!.deselectTalkingUser(userID)
+        
+        self.activeCall = nil
     }
     
     func client(client: SINCallClient!, didReceiveIncomingCall call: SINCall!) {
         print("did receive incoming call")
         call.answer()
+        self.activeCall = call
+        call.delegate = self
+        let userID = self.activeCall!.remoteUserId
+        self.tableVC!.selectTalkingUser(userID)
     }
     
     func client(client: SINCallClient!, localNotificationForIncomingCall call: SINCall!) -> SINLocalNotification! {
@@ -59,10 +81,10 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
         }
     }
     
-    
-    
-    func setupSinch(username:String){
+    func setupSinch(username:String,vc:ViewController){
         print("setupSinch:",username)
+        
+        self.tableVC = vc
         
         self.sinchClient = Sinch.clientWithApplicationKey("6d11b5fd-d4f4-4082-856a-83552da692e4", applicationSecret: "BMK/HNE+8UmztffFLN5MsA==", environmentHost: "sandbox.sinch.com", userId: username)
         self.sinchClient!.delegate = self
@@ -85,6 +107,17 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
         let call:SINCall = sinchClient!.callClient().callUserWithId(username)
         self.sinchClient!.callClient().delegate = self
         call.delegate = self
+    }
+    
+    func endCall(){
+        if let unwrappedActiveCall = activeCall{
+            unwrappedActiveCall.hangup()
+            print("Ended Call")
+        }else{
+            print("Could Not End Call")
+        }
+        
+        self.activeCall = nil
     }
     
 }

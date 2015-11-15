@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var tableView: UITableView!
     
-    var crewMembers:[String] = ["Jon","George","Cameron"]
+    var crewMembers:[String] = ["jon","george","cameron"]
     
     override func viewWillAppear(animated: Bool) {
         self.tableView.dataSource = self
@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let alertController = UIAlertController(title: "Title", message: "Enter your username", preferredStyle: .Alert)
         let ok = UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             let username = inputTextField!.text!
-            SinchConnector.sharedInstance.setupSinch(username)
+            SinchConnector.sharedInstance.setupSinch(username,vc: self)
             self.myUsernameLabel.text = "Me: " + username
         })
         let cancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) -> Void in }
@@ -54,6 +54,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    
+    func selectTalkingUser(uID:String){
+        var userId = uID.lowercaseString
+        print("selectTalkingUser:" + userId)
+        let index = self.crewMembers.indexOf(userId)
+        let indexPath = NSIndexPath(forRow: index!, inSection: 0)
+        let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
+        let statusImage:UIView = cell.viewWithTag(2)!
+        statusImage.backgroundColor = UIColor.greenColor()
+    }
+    
+    func deselectTalkingUser(uID:String){
+        var userId = uID.lowercaseString
+        print("deselectTalkingUser:" + userId)
+        let index = self.crewMembers.indexOf(userId)
+        let indexPath = NSIndexPath(forRow: index!, inSection: 0)
+        let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
+        let statusImage:UIView = cell.viewWithTag(2)!
+        statusImage.backgroundColor = UIColor.whiteColor()
+    }
+    
 
     @IBAction func conferenceBegin(sender: AnyObject) {
         SinchConnector.sharedInstance.startConference()
@@ -71,21 +93,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let label:UILabel = cell.viewWithTag(1) as! UILabel
         label.text = self.crewMembers[indexPath.row]
         
-        
-        
+        let button:UIButton = cell.viewWithTag(3)! as! UIButton
+        button.addTarget(self, action: "cellTouchDown:", forControlEvents: UIControlEvents.TouchUpInside)
         return cell
     }
     
-    func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        print("Touch down")
-        return true
+    func cellTouchDown(sender:UIButton){
+        if let _ = SinchConnector.sharedInstance.activeCall{
+            // End Call
+            let cell:UITableViewCell = sender.superview!.superview! as! UITableViewCell
+            let indexPath = self.tableView.indexPathForCell(cell)!
+            
+            let statusImage:UIView = cell.viewWithTag(2)!
+            statusImage.backgroundColor = UIColor.whiteColor()
+            
+            SinchConnector.sharedInstance.endCall()
+        }else{
+            // Start call
+            let cell:UITableViewCell = sender.superview!.superview! as! UITableViewCell
+            let indexPath = self.tableView.indexPathForCell(cell)!
+            
+            let statusImage:UIView = cell.viewWithTag(2)!
+            statusImage.backgroundColor = UIColor.greenColor()
+            
+            let crewUserID = self.crewMembers[indexPath.row]
+            SinchConnector.sharedInstance.startCall(crewUserID)
+        }
+        
+        
     }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell:UITableViewCell = self.tableView.cellForRowAtIndexPath(indexPath)!
-        print("Touch up")
-    }
-    
 
 }
 

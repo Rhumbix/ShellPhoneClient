@@ -16,6 +16,7 @@
 		FC423A241BF7D3370047EADD /* ShellphoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A231BF7D3370047EADD /* ShellphoneTests.swift */; };
 		FC423A2F1BF7D3370047EADD /* ShellphoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A2E1BF7D3370047EADD /* ShellphoneUITests.swift */; };
 		FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A3C1BF7D8150047EADD /* SinchConnector.swift */; };
+		FC423A441BF8461F0047EADD /* ShellNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC423A431BF8461F0047EADD /* ShellNet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FC423A301BF7D3370047EADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC423A3C1BF7D8150047EADD /* SinchConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SinchConnector.swift; sourceTree = "<group>"; };
 		FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shellphone-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC423A431BF8461F0047EADD /* ShellNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShellNet.swift; sourceTree = "<group>"; };
 		FFD844BBD77FF86D675D3D44 /* Pods_Shellphone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shellphone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				FC423A171BF7D3370047EADD /* LaunchScreen.storyboard */,
 				FC423A1A1BF7D3370047EADD /* Info.plist */,
 				FC423A3E1BF7DBA70047EADD /* Shellphone-Bridging-Header.h */,
+				FC423A431BF8461F0047EADD /* ShellNet.swift */,
 			);
 			path = Shellphone;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC423A441BF8461F0047EADD /* ShellNet.swift in Sources */,
 				FC423A111BF7D3360047EADD /* ViewController.swift in Sources */,
 				FC423A0F1BF7D3360047EADD /* AppDelegate.swift in Sources */,
 				FC423A3D1BF7D8150047EADD /* SinchConnector.swift in Sources */,

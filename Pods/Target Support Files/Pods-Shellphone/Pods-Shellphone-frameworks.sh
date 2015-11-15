@@ -82,3 +82,12 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Shellphone/Alamofire.framework"
+  install_framework "Pods-Shellphone/SwiftyJSON.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Shellphone/Alamofire.framework"
+  install_framework "Pods-Shellphone/SwiftyJSON.framework"
+fi
