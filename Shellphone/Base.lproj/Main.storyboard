@@ -4,7 +4,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+            <string>Roboto-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="w59-Wr-Ksz">
@@ -141,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="41" y="127"/>
         </scene>
-        <!--View Controller-->
+        <!--Work Crew-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="listVC" id="BYZ-38-t0r" customClass="ViewController" customModule="Shellphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="listVC" title="Work Crew" id="BYZ-38-t0r" customClass="ViewController" customModule="Shellphone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -160,7 +167,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XH2-aR-Jwk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XH2-aR-Jwk">
                                 <rect key="frame" x="-4" y="195" width="328" height="373"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -285,6 +292,7 @@
                             <constraint firstItem="PAe-Pj-eeY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tzK-4Q-Q8M"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bNP-QX-gng"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="animatedBeaconImage" destination="5ZX-3b-jPn" id="vzR-b4-Qzl"/>
@@ -297,7 +305,100 @@
                 <tapGestureRecognizer id="vB2-q3-Gx9"/>
                 <tapGestureRecognizer id="urg-kv-0hD"/>
             </objects>
-            <point key="canvasLocation" x="465" y="127"/>
+            <point key="canvasLocation" x="1230" y="-66"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RfQ-3Q-rEs">
+            <objects>
+                <tabBarController storyboardIdentifier="tabVC" id="BPg-tA-kji" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="E8B-2t-wH9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="JBf-YI-B27"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vz6-yJ-WJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813" y="-153"/>
+        </scene>
+        <!--Work Shift-->
+        <scene sceneID="gJx-Tz-RKa">
+            <objects>
+                <viewController storyboardIdentifier="WorkerProfile" title="Work Shift" id="XOH-76-6kC" customClass="WorkerProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qiv-0s-5B2"/>
+                        <viewControllerLayoutGuide type="bottom" id="DGr-RE-tzZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gBL-ka-cLw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXY-Im-Ttj" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="15" width="320" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbW-K1-KyZ">
+                                        <rect key="frame" x="0.0" y="-7" width="160" height="60"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="WKA-WK-KL5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="TIME CLOCK">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8oL-7G-Zc7">
+                                        <rect key="frame" x="160" y="-7" width="160" height="60"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="AGp-us-pwS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
+                                        <state key="normal" title="PROFILE">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="PbW-K1-KyZ" secondAttribute="centerY" id="POc-Ia-HpI"/>
+                                    <constraint firstAttribute="width" secondItem="PbW-K1-KyZ" secondAttribute="width" multiplier="2" id="YFY-eI-iiL"/>
+                                    <constraint firstItem="PbW-K1-KyZ" firstAttribute="width" secondItem="8oL-7G-Zc7" secondAttribute="width" id="fND-c3-rPk"/>
+                                    <constraint firstAttribute="centerY" secondItem="8oL-7G-Zc7" secondAttribute="centerY" id="fdw-Wn-KC4"/>
+                                    <constraint firstItem="PbW-K1-KyZ" firstAttribute="leading" secondItem="BXY-Im-Ttj" secondAttribute="leading" id="oaD-RZ-t2I"/>
+                                    <constraint firstItem="8oL-7G-Zc7" firstAttribute="leading" secondItem="PbW-K1-KyZ" secondAttribute="trailing" id="vxU-Fc-EiC"/>
+                                    <constraint firstAttribute="height" constant="45" id="zac-zp-KWf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="BXY-Im-Ttj" firstAttribute="top" secondItem="Qiv-0s-5B2" secondAttribute="bottom" constant="-5" id="Gah-6w-xVE"/>
+                            <constraint firstItem="BXY-Im-Ttj" firstAttribute="leading" secondItem="gBL-ka-cLw" secondAttribute="leadingMargin" constant="-16" id="WDF-KP-LGI"/>
+                            <constraint firstItem="BXY-Im-Ttj" firstAttribute="width" secondItem="gBL-ka-cLw" secondAttribute="width" id="gVr-YZ-wKf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Work Shift" id="ulV-3i-pDk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="profileButton" destination="8oL-7G-Zc7" id="Cwx-jn-x8D"/>
+                        <outlet property="timeClockButton" destination="PbW-K1-KyZ" id="9zw-JR-wDW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkn-5P-qj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="67"/>
         </scene>
     </scenes>
     <resources>

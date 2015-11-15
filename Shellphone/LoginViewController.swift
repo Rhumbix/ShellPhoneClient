@@ -15,9 +15,22 @@ class LoginViewController: UIViewController {
     @IBAction func signInPressed(sender: AnyObject) {
         self.resignFirstResponder()
         
-        let vc:ViewController = self.storyboard!.instantiateViewControllerWithIdentifier("listVC") as!ViewController
+        let vc:UITabBarController = self.storyboard!.instantiateViewControllerWithIdentifier("tabVC") as!UITabBarController
         
-        vc.userID = self.userID.text!
+        
+        
+        /*let item:UITabBarItem vc.tabBar.items![0] [vc.tabBar.items objectAtIndex:0];
+        item.setTit*/
+        
+        for someVC:UIViewController in vc.viewControllers!{
+            if someVC.isKindOfClass(ViewController){
+                let someVCVC:ViewController = someVC as! ViewController
+                someVCVC.userID = self.userID.text!
+                
+                
+                someVCVC.tabBarItem = UITabBarItem(title: "List View", image: nil, tag: 0)
+            }
+        }
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

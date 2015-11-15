@@ -31,6 +31,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.delegate = self
     }
     
+    override func viewDidLoad() {
+        /*let tabTitle = UITabBarItem(title: "Some Thing", image: nil, tag: 0)
+        
+        
+        [self setTabBarItem: tabtitle];*/
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         // Do any additional setup after loading the view, typically from a nib.
