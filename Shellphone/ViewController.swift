@@ -26,23 +26,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let greenColor:UIColor = UIColor(red: 184.0/255.0, green: 233.0/255.0, blue: 134.0/255.0, alpha: 1.0)
     
+    var mapVC:MapVC?
+    
     override func viewWillAppear(animated: Bool) {
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
     
     override func viewDidLoad() {
-        /*let tabTitle = UITabBarItem(title: "Some Thing", image: nil, tag: 0)
-        
-        
-        [self setTabBarItem: tabtitle];*/
+        getUsers()
+        presentUsernameInput()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         // Do any additional setup after loading the view, typically from a nib.
-        getUsers()
-        presentUsernameInput()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,7 +105,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.selectionStyle = .None;
         
         let label:UILabel = cell.viewWithTag(1) as! UILabel
-        label.text = self.crewMembers[indexPath.row]
+        label.text = self.crewMembersFull[indexPath.row]
         
         let profileImage:UIImageView = cell.viewWithTag(6) as! UIImageView
         profileImage.image = UIImage(named: crewMembers[indexPath.row])
@@ -124,7 +123,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         greenOvalImage.image = UIImage(named: "greenOvalDark")
         
         let label:UILabel = cell.viewWithTag(1) as! UILabel
-        label.text = self.crewMembers[indexPath.row]
+        label.text = self.crewMembersFull[indexPath.row]
         label.font = UIFont(name: "Helvetica-Bold", size: 18.0)
         label.textColor = UIColor(red: 65.0/255.0, green: 117.0/255.0, blue: 5.0/255.0, alpha: 1.0)
         
@@ -134,6 +133,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.animatedBeaconImage.animationImages = animationImages
         self.animatedBeaconImage.animationDuration = 1.0
         self.animatedBeaconImage.startAnimating()
+        
+        self.mapVC?.selectUser(indexPath.row)
     }
     
     func deselectUser(cell:UITableViewCell,indexPath:NSIndexPath){
@@ -144,7 +145,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         greenOvalImage.image = UIImage(named: "greenOval")
         
         let label:UILabel = cell.viewWithTag(1) as! UILabel
-        label.text = self.crewMembers[indexPath.row]
+        label.text = self.crewMembersFull[indexPath.row]
         label.font = UIFont(name: "Helvetica", size: 18.0)
         label.textColor = UIColor(red: 155.0/255.0, green: 155/255.0, blue: 155.0/255.0, alpha: 1.0)
         
@@ -153,6 +154,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         self.animatedBeaconImage.animationImages = animationImages
         self.animatedBeaconImage.startAnimating()
+        
+        self.mapVC?.resetImages()
     }
     
     func cellTouchDown(sender:UIButton){

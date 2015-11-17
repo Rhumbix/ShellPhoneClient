@@ -18,6 +18,9 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
     
     var tableVC:ViewController?
     
+    var mapVC:MapVC?
+    
+    
     override init(){
         super.init()
     }
@@ -94,6 +97,8 @@ class SinchConnector:NSObject,SINClientDelegate,SINCallDelegate,SINCallClientDel
         
         self.sinchClient!.start()
         self.sinchClient!.startListeningOnActiveConnection()
+        
+        self.sinchClient!.audioController().enableSpeaker()
     }
     
     
